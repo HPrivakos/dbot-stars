@@ -1,0 +1,22 @@
+{
+  "name": "starring-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --trace-warnings --abort-on-uncaught-exception --unhandled-rejections=strict dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@dcl/eslint-config": "^1.1.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.328.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
+  }
+}
