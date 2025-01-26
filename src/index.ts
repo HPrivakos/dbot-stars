@@ -27,3 +27,10 @@ client.once(Events.ClientReady, (c) => {
 })
 
 void main()
+
+// Handle CTRL+C and SIGINT
+process.on('SIGINT', async () => {
+  console.log('Shutting down...')
+  await client.destroy()
+  process.exit(0)
+})
