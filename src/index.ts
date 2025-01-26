@@ -6,9 +6,7 @@ const client = new Client({
   partials: [Partials.Message, Partials.Channel, Partials.Reaction]
 })
 async function main() {
-  const secret = { DISCORD_API_KEY: process.env.DISCORD_API_KEY! }
-
-  await client.login(secret.DISCORD_API_KEY)
+  await client.login(process.env.DISCORD_API_KEY!)
   const starredChannel = (await client.channels.fetch(process.env.STAR_CHANNEL!)) as TextChannel
   const guild = await client.guilds.fetch(process.env.GUILD_ID!)
 
